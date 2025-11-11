@@ -3,6 +3,7 @@ CREATE DATABASE db_peminjaman;
 USE db_peminjaman;
 
 CREATE TABLE peminjaman (
+    ADD COLUMN nama_alat VARCHAR(100) AFTER prodi;
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100),
     nim VARCHAR(20),

@@ -43,6 +43,11 @@ if (!$data) {
       <input type="text" name="prodi" value="<?= $data['prodi'] ?>" class="form-control" required>
     </div>
     <div class="mb-3">
+  <label>Nama Alat</label>
+  <input type="text" name="nama_alat" value="<?= htmlspecialchars($data['nama_alat']) ?>" class="form-control" required>
+</div>
+
+    <div class="mb-3">
       <label>Jam Peminjaman</label>
       <input type="time" name="jam_peminjaman" value="<?= $data['jam_peminjaman'] ?>" class="form-control" required>
     </div>
@@ -68,6 +73,7 @@ if (isset($_POST['update'])) {
     $nama     = $_POST['nama'];
     $nim      = $_POST['nim'];
     $prodi    = $_POST['prodi'];
+    $nama_alat = $_POST['nama_alat'];
     $jam      = $_POST['jam_peminjaman'];
     $tanggal  = $_POST['tanggal_peminjaman'];
     $fotoLama = $data['foto_alat'];
@@ -92,24 +98,26 @@ if (isset($_POST['update'])) {
 
             // Query UPDATE dengan foto baru
             $query = "UPDATE peminjaman SET 
-                        nama='$nama',
-                        nim='$nim',
-                        prodi='$prodi',
-                        jam_peminjaman='$jam',
-                        tanggal_peminjaman='$tanggal',
-                        foto_alat='$fotoBaru'
-                      WHERE id='$id'";
-        }
+            nama='$nama',
+            nim='$nim',
+            prodi='$prodi',
+            nama_alat='$nama_alat',
+            jam_peminjaman='$jam',
+            tanggal_peminjaman='$tanggal',
+            foto_alat='$fotoBaru'
+          WHERE id='$id'";
+
     } else {
         // Query UPDATE tanpa ganti foto
         $query = "UPDATE peminjaman SET 
-                    nama='$nama',
-                    nim='$nim',
-                    prodi='$prodi',
-                    jam_peminjaman='$jam',
-                    tanggal_peminjaman='$tanggal'
-                  WHERE id='$id'";
-    }
+            nama='$nama',
+            nim='$nim',
+            prodi='$prodi',
+            nama_alat='$nama_alat',
+            jam_peminjaman='$jam',
+            tanggal_peminjaman='$tanggal'
+          WHERE id='$id'";
+
 
     // Jalankan query update
     if (mysqli_query($conn, $query)) {
