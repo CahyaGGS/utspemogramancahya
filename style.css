@@ -1,0 +1,85 @@
+/* =============================
+   STYLE SISTEM PEMINJAMAN ALAT
+   ============================= */
+
+body {
+  background-color: #f7faff;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  font-weight: 600;
+  color: #004aad;
+}
+
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #004aad;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table td {
+  vertical-align: middle;
+  background-color: #fafcff;
+}
+
+.btn {
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: 500;
+  color: #333;
+}
+
+form input, form select {
+  border-radius: 8px;
+  border: 1px solid #cfd9e6;
+}
+
+form input:focus {
+  border-color: #004aad;
+  box-shadow: 0 0 4px rgba(0, 74, 173, 0.3);
+}
+
+img {
+  border-radius: 8px;
+  border: 2px solid #e0e7ff;
+}
+
+a.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+a.btn-secondary:hover {
+  background-color: #5c636a;
+}
+
+a.btn-warning {
+  color: #fff;
+}
+
+.table img {
+  max-width: 80px;
+  height: auto;
+}
